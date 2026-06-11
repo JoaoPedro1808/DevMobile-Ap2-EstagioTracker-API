@@ -15,7 +15,7 @@ public class UsuarioDaoImpl implements UsuarioDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    private final RowMapper<Usuario> usuarioRowMapper = (rs, rowNum) ->Usuario.builder()
+    private final RowMapper<Usuario> usuarioRowMapper = (rs, rowNum) -> Usuario.builder()
             .id(rs.getLong("id"))
             .nome(rs.getString("nome"))
             .email(rs.getString("email"))
